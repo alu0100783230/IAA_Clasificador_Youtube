@@ -27,9 +27,9 @@ module IAA
     if (File.file?(name))
       file = File.open(name, 'r')
       puts "Extrayendo información de #{name}"
-      file_1.readline
-      while !file_1.eof?
-        line = CSV.parse(file_1.readline)
+      file.readline
+      while !file.eof?
+        line = CSV.parse(file.readline)
         file_o.puts "\"#{line[0][1]}\",\"#{line[0][3]}\"\n"
       end
     else
@@ -41,9 +41,9 @@ module IAA
     if (File.file?(name))
       file = File.open(name, 'r')
       puts "Extrayendo información de #{name}"
-      file_1.readline
-      while !file_1.eof?
-        line = CSV.parse(file_1.readline)
+      file.readline
+      while !file.eof?
+        line = CSV.parse(file.readline)
         file_o.puts "\"#{line[0][0]}\",\"#{line[0][1]}\"\n"
       end
     else
